@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// Categorize by Sorting
 public class solution1 {
     public static void main(String[] args) {
         String[] input1 = {"eat","tea","tan","ate","nat","bat"};
