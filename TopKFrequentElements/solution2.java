@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+// TC: O(nlog(k))
+// SC: O(n)
 public class solution2 {
     public static int[] topKFrequent(int[] nums, int k) {
         int[] arr = new int[k];
