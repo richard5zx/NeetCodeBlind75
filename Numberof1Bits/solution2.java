@@ -1,22 +1,18 @@
 package Numberof1Bits;
 
-public class solution1 {
-    // Approach 1: Loop on each bit and count
-    // TC: O(32) = O(1)
+public class solution2 {
+    // Approach 2: Flip the least significant 1 bit
+    // TC: O(1)
     // SC: O(1)
     public static int hammingWeight(int n) {
-        int bits = 0;
-        int mask = 1;
-        
-        for (int i = 0; i < 32; i++) {
-            if ((n & mask) != 0) {
-                bits++;
-            }
-            mask = mask << 1;
+        int count = 0;
+        while (n != 0) {
+            n = n & (n - 1);
+            count++;
         }
-        return bits;
+        return count;
     }
-
+    
     public static void main(String args[]) {
         // Binary Representation: 00000000000000000000000000001011
         // Decimal Representation: 11
