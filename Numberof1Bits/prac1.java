@@ -28,5 +28,11 @@ public class prac1 {
         scanner.close();
 
         printBit(input);
+
+        // Why doesnt it shift properly? ist dividing by 2 suppose to shift right?
+        int i = -1;
+        printBit(i);
+        i /= 2;
+        printBit(i);
     }
 }
