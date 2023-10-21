@@ -1,10 +1,11 @@
 package Numberof1Bits;
 
 public class solution1 {
-    // Approach 1: Loop on each bit and count
+    // Approach 1: Loop and count each bit and count (using & operation)
     // TC: O(32) = O(1)
     // SC: O(1)
     public static int hammingWeight(int n) {
+    
         int bits = 0;
         int mask = 1;
         
