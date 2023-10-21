@@ -1,19 +1,20 @@
 package Numberof1Bits;
 
 public class solution2 {
-    // Approach 2: Flip the least significant 1 bit
-    // TC: O(1)
-    // SC: O(1)
     public static int hammingWeight(int n) {
-        int count = 0;
-        while (n != 0) {
-            n = n & (n - 1);
-            count++;
+        int numOfBits = 0;
+        
+        for(int i = 0; i < 32; i++) {
+            if((n % 2) != 0) {
+                numOfBits++;
+            }
+            n = n >> 1;
         }
-        return count;
+        return numOfBits;
     }
-    
-    public static void main(String args[]) {
+
+    public static void main(String[] args) {
+        // Approach 2: Loop and count each bit and count (using % operation)
         // Binary Representation: 00000000000000000000000000001011
         // Decimal Representation: 11
         int input1 = 11;
