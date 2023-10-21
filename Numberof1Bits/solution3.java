@@ -1,14 +1,16 @@
 package Numberof1Bits;
 
 public class solution3 {
-    // Approach 3: Flip the least significant 1 bit + recursive
+    // Approach 3: Flip the least significant 1 bit
     // TC: O(1)
     // SC: O(1)
     public static int hammingWeight(int n) {
-        if (n == 0) return 0;
-        if (n == 1) return 1;
-        
-        return hammingWeight(n & (n - 1)) + 1;
+        int count = 0;
+        while (n != 0) {
+            n = n & (n - 1); // erases the last 1 bit
+            count++;
+        }
+        return count;
     }
     
     public static void main(String args[]) {
